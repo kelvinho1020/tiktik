@@ -6,7 +6,6 @@ import Sidebar from '../components/Sidebar';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [isSSR, setisSSR] = useState(true);
-
   useEffect(() => {
     setisSSR(false)
   }, []);
