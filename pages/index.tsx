@@ -1,8 +1,29 @@
+import axios from 'axios'
+import { NextPage } from 'next'
+import { Video } from '../types'
 
-export default function Home() {
+interface IProps {
+  videos: Video[]
+}
+
+const Home = ({ videos }: IProps) => {
+  console.log(videos);
+
   return (
-    <div className="text-3xl font-bold underline">
+    <h1 className="text-3xl font-bold underline">
       TikTik
-    </div>
+    </h1>
   )
 }
+
+export const getServerSideProps = async () => {
+  const { data } = await axios.get(`http://localhost:3000/api/post`);
+
+  return {
+    props: {
+      videos: data
+    }
+  }
+}
+
+export default Home
