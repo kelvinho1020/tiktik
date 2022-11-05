@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
   images: {
-    domains: ['pbs.twimg.com'],
+    domains: ['pbs.twimg.com', 'lh3.googleusercontent.com'],
   }
 }
 
