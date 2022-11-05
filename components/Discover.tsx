@@ -12,10 +12,10 @@ const Discover = () => {
   const topicStyle = "xl:border-gray-300 text-black";
 
   useEffect(() => {
-    console.log('-----Call')
+
   
     return () => {
-      console.log('-----Cleanup')
+
     }
   }, [])
   
