@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   productionBrowserSourceMaps: true,
+  images: {
+    domains: ['pbs.twimg.com'],
+  }
 }
 
 module.exports = nextConfig
